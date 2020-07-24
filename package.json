@@ -1,0 +1,18 @@
+{
+  "name": "Sample-discordjs-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.1",
+    "dblapi.js": "^2.4.0",
+    "discord.js": "^12.2.0",
+    "embeds": "^2.11.6"
+  }
+}
