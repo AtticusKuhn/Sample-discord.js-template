@@ -17,8 +17,8 @@ for(const file of fs.readdirSync('./commands/')) { // Iterates through every fil
     if(!file.endsWith(".js")){ 
         continue
     }
-    var fileName = file.substring(0, file.length - 3); // Removes last three characters from file name to get rid of the .js extension (which should™ be .js ^^) for propper file name.
-    var fileContenjs = require(`./commands/${file}`); // Defines fileContenjs of the export of the command in question.
+    const fileName = file.substring(0, file.length - 3); // Removes last three characters from file name to get rid of the .js extension (which should™ be .js ^^) for propper file name.
+    const fileContenjs = require(`./commands/${file}`); // Defines fileContenjs of the export of the command in question.
     client.commands.set(fileName, fileContenjs); // Adds the command name to the client.commands collection with a value of it's respective exporjs.
 }
 //set up for each event
@@ -26,8 +26,8 @@ for(const file of fs.readdirSync('./events/')) { // Iterates through every file 
     if(!file.endsWith(".js")){ 
         continue
     }
-    var fileName = file.substring(0, file.length - 3); // Removes last three characters from file name to get rid of the .js extension (which should™ be .js ^^) for propper file name.
-    var fileContenjs = require(`./events/${file}`); // Defines fileContenjs of the export of the event in question.
+    const fileName = file.substring(0, file.length - 3); // Removes last three characters from file name to get rid of the .js extension (which should™ be .js ^^) for propper file name.
+    const fileContenjs = require(`./events/${file}`); // Defines fileContenjs of the export of the event in question.
     client.on(fileName, fileContenjs.bind(null, client)); // Set's the event of whatever the file name is to the bound function of said export (this will automatically make the first parmater of the export function to client.
 }
 //log in with bot

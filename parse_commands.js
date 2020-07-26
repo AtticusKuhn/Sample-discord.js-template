@@ -3,7 +3,7 @@ const config = require("./config.js");
 function parse_commands(msg, client){
     let command = msg.split(" ")[0];
     //get command from data
-    let found_command = client.commands.get(command)
+    let found_command = client.commands.get(command)|| client.commands.find(c => c.alias ? c.alias.has(command) : false )
     if(!found_command){
         return{
             success:false,
